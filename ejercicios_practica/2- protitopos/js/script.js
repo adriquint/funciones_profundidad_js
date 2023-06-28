@@ -8,7 +8,7 @@
 /* Enunciado
 
 Transforme el array de objetos de posteos brindado como 
-variable "data" y cree una lista de protitopos Post
+variable "data" y cree una lista de prototipos Post
 
 */
 
@@ -48,21 +48,52 @@ const data = [
   ]
 
 /*
-
 1 - Primero arme su prototipo "Post" el cual deberá recibir como parámetro
 --> titulo
 --> avatar
 --> texto
-
 */
 
+function Post (titulo, avatar, texto) {
+  this.titulo = titulo;
+  this.avatar = avatar;
+  this.texto = texto;
+}
+console.log(Post)
+//const post1 = new Post (data[0].titulo, data[0].avatar, data[0].texto)
+//console.log(post1)
 
 
 /*
-
 2 - Utilice un bucle para recorrer "data" y en cada iteración:
 --> Genere un objeto del prototipo con los datos del objeto de esa iteración
 --> Almacene el objeto generado dentro de una lista "posts"
-
 */
 
+//Prueba con for of..
+const posts = [];
+console.log(posts)
+
+for(const datos of data){
+  const post = new Post (datos.titulo, datos.avatar, datos.texto)
+  posts.push(post)
+  /*const post1 = new Post (data[0].titulo, data[0].avatar, data[0].texto)
+  const post2 = new Post (data[1].titulo, data[1].avatar, data[1].texto)
+  const post3 = new Post (data[2].titulo, data[2].avatar, data[2].texto)*/
+}
+
+console.log(posts)
+console.log(data)
+console.log(data[0].titulo)
+
+//Prueba con for
+/*const posts = [];
+console.log(posts)
+console.log(data)
+
+for (let i = 0; i < data; i++) {
+  const post = new Post (data.titulo, data.avatar, data.texto);
+  posts.push(post);
+}
+console.log(posts)
+console.log(post);*/
