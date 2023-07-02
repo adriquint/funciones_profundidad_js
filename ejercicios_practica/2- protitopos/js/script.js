@@ -85,15 +85,3 @@ for(const datos of data){
 console.log(posts)
 console.log(data)
 console.log(data[0].titulo)
-
-//Prueba con for
-/*const posts = [];
-console.log(posts)
-console.log(data)
-
-for (let i = 0; i < data; i++) {
-  const post = new Post (data.titulo, data.avatar, data.texto);
-  posts.push(post);
-}
-console.log(posts)
-console.log(post);*/
