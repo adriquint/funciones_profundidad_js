@@ -22,7 +22,12 @@ function restart() {
     resultText.textContent = ""
     imgPoke.classList.remove("success")
     numero = Math.round(Math.random()*(pokemons.length));
-    imgPoke.src = pokemons[numero].thumbnail;
+    imgPoke.src = (pokemons[numero].thumbnail);
+
+    //Pruebas
+    console.log(`Numero random desde funcion: ${numero}`)
+    console.log(`"Id" poke desde funcion: ${pokemons[numero].id}`)
+    console.log(`Nombre poke desde función: ${pokemons[numero].name}`)
 }
 
 restart();
@@ -30,11 +35,8 @@ agregarEventos();
 
 
 //Pruebas
-console.log(numero)
-console.log(pokemons[numero].id)
-console.log(pokemons[numero])
-console.log(pokemons.length)
+//console.log(numero)
+console.log(`El id es: ${pokemons[numero].id}`)
+console.log(`El numero random es: ${numero}`)
+console.log(`Length: ${pokemons.length}`)
 console.log(pokemons[4])
-
-console.log (resultText.textContent)
-console.log(imgPoke)
